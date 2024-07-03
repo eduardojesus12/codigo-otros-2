@@ -1,15 +1,12 @@
-var formulario = document.querySelector("#form")
+const formulario = document.querySelector("#form") // cambie el var por const, para hacerlo funcion
 
-formulario.onsubmit = function(e) {
+formulario.addEventListener ("submit", async( e ) => { // quise hacerlo como promesa, pero no me salió 
 
-  e.prevent();
+  e.preventDeFault(); // cambie el prevent, por preventDeafault
   
-  var n = formulario.elements[0]
-  var e = formulario.elements[1]
-  var na = formulario.elements[2]
-
-  var nombre = n.value
-  var edad = e.value
+  const n = formulario.elements["name"]
+  const a = formulario.elements["age"]
+  const na = formulario.elements["nationality"]
 
   var i = na.selectedIndex
   var nacionalidad = na.options[i].value
@@ -29,6 +26,7 @@ if (nombre.length > 0
   agregarInvitado(nombre, edad, nacionalidad)
   }
 }
+) // me atoré demasiado aqui, no le entendi al codigo y que es lo que quiso hacer 
 
 var botonBorrar = document.createElement("button")
 botonBorrar.textContent = "Eliminar invitado"
@@ -90,7 +88,7 @@ var corteLinea = document.createElement("br")
 elementoLista.appendChild(corteLinea)
 elementoLista.appendChild(botonBorrar);
 
- botonBorrar.onclick = function() {
+botonBorrar.onclick = function() {
 // this.parentNode.style.display = 'none';
 botonBorrar.parentNode.remove()
   }
