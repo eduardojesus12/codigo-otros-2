@@ -1,40 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" media="screen" href="./styles.css">
-  <title>Formulario</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="./styles.css">
+    <title>Formulario de asistencia</title>
 </head>
 <body>
-  <h1>Bienvenidos a mi fiesta</h1>
-  <h2>Por favor, confirmar asistencia:</h2>
-
-  <form class="formulario">
-    Nombre <input type="text" name="name" id="name">
-    <br />
-    Edad <input type="number" name="age" id="age">
-    <br />
-
-    Nacionalidad
-    <select name="nationality" id="nationality">
-      <option value="ar">Argentina</option>
-      <option value="mx">Mexicana</option>
-      <option value="per">Peruana</option>
-      <option value="vnzl">Venezolana</option>
-    </select>
-    <br />
-    <input type="submit">
-  </form>
-
-  <div>
-    <h2>Lista de invitados</h2>
-
-  </div>
-
-  <script src="../formulario.js"></script>
+    <h1>Bienvenidos a mi fiesta</h1>
+    <h2>Por favor, confirmar asistencia:</h2>
+    <!-- Agregué el id "form" al formulario para que el JavaScript pueda seleccionarlo -->
+    <form id="form" class="formulario">
+        Nombre: <input type="text" name="name" id="name"> <!-- Agregué el id "name" al input -->
+        <br />
+        Edad: <input type="number" name="age" id="age"> <!-- Agregué el id "age" al input -->
+        <br />
+        Nacionalidad:
+        <!-- El select ya tenía el nombre "nationality", así que no fue necesario cambiarlo -->
+        <select name="nationality" id="nationality"> 
+            <option value="ar">Argentina</option>
+            <option value="mx">Mexicana</option>
+            <option value="per">Peruana</option>
+            <option value="vnzl">Venezolana</option>
+        </select>
+        <br />
+        <input type="submit" value="Enviar">
+    </form>
+    <!-- Agregué el div con el id "lista-de-invitados" para que el JavaScript pueda agregar los invitados -->
+    <div id="lista-de-invitados">
+        <h2>Lista de invitados</h2>
+    </div>
+    <script src="./formulario.js"></script>
 </body>
-
 </html>
+
